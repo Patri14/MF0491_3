@@ -14,4 +14,216 @@
     background-color: #f2f2f2;
     padding: 25px;
   }
-  
+
+ 
+
+
+
+
+h1 {
+  font-size: 11px;
+  color: #c5c5c5;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  padding: .5em;
+  width: 100%;
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  -webkit-align-self: center;
+  align-self: center;
+}
+.imagen_producto {
+    margin: 0 auto;
+    img {
+        max-width: 100%;
+        //height: auto;
+        height: 30vh;}
+}
+
+.producto_completo{
+  border: 1px solid rgba(171, 173, 170, 0.56);;
+}
+
+.quantity_control-quantity_container {
+  border: 1px solid #e1e1e1;
+  border-radius: 2rem;
+  padding: 0 .25rem;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f7f7f7;
+}
+
+.quantity_control-button {
+  border: none;
+  outline: none;
+  vertical-align: top;
+  height: 2.2rem;
+  width: 2.2rem;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 2.2rem;
+}
+
+.quantity_control-quantity {
+  width: 2.3rem;
+  height: 2.2rem;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+
+.button._primary {
+  display: block;
+  background-color: #88cc88;
+  border: solid 1px #88cc88;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Open Sans, Arial, sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 1rem;
+  line-height: 12px;
+  min-width: 104px;
+}
+.product_controls-button {
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  -webkit-align-self: auto;
+  align-self: auto;
+  margin-top: 0 !important;
+  height: 50px;
+  width: auto !important;
+  padding: 0 !important;
+  line-height: 1.2;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.product_tile-left_container {
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 120px;
+  flex-basis: 120px;
+  -webkit-align-self: center;
+  align-self: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+}
+
+.product_tile-right_container {
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  -webkit-align-self: auto;
+  align-self: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+  padding-left: 15px;
+}
+
+.product_tile-right_container > div {
+  padding: 0 .75rem;
+}
+.product_tile-price_holder {
+  margin-bottom: .5rem;
+}
+
+.prices-price._current{
+  display: inline-block;
+  font-weight: 500;
+  margin-right: .5rem;
+  font-size: 2em;
+  color: #8f8f8f;
+  margin-left: 10px;
+}
+.prices-price {
+  font-size: 16px;
+}
+.prices-price._pum {
+  display: inline-block;
+  font-size: 1.2em;
+  color: #8f8f8f;
+  vertical-align: baseline;
+  font-weight: 300;
+}
+
+.product_tile-description {
+  letter-spacing: .005em;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 300;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  color: #242424;
+
+  span{
+    font-size: 0.8em;
+    color: grey;
+  }
+}
+.button {
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0;
+}
