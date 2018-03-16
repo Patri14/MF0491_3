@@ -13,13 +13,15 @@ import { ProductoService } from './providers/producto.service';
 import { ProductoPipe } from './pipes/producto.pipe';
 
 import { FormsModule } from '@angular/forms';
+import { CarritoComponent } from './supermercado/carrito/carrito.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SupermercadoComponent,
-    ProductoPipe 
+    ProductoPipe,
+    CarritoComponent 
   ],
   imports: [
     BrowserModule,
