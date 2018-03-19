@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Producto } from '../model/producto';
 import { ProductoService } from '../providers/producto.service';
 
@@ -10,33 +10,63 @@ import { ProductoService } from '../providers/producto.service';
 })
 export class SupermercadoComponent implements OnInit {
 
-  aProducto : Array<Producto>; //array casteado con tipo producto
-  productoSelec : Producto;
+  aProducto : Array<Producto>; //para que recoger todos los productos de MOCK
+  productoSelec : Producto;//para el producto que seleccionaremos para el carrito
+  acumulador: number = 0;//para recoger la cantidad de productos seleccionados
 
    //inyectamos para poder usar este servicio en el supermercado
   constructor( public productoService: ProductoService) {
     
-    console.log('ProductoComponent constructor');     
-  
-    this.aProducto = new Array<Producto>();
-
+    console.log('SupermercadoComponent constructor');     
+    
+    this.aProducto = new Array<Producto>(); 
+    console.log(this.aProducto); 
    }
 
    //llamadas a los servicios
   ngOnInit() {
+    console.log('SupermercadoComponent ngOnInit'); 
 
-    console.log('ProductoComponent ngOnInit');    
     this.aProducto= this.productoService.getAll();
-
-    //si no existe el producto creo una producto anónimo
-    //this.productoSelec = this.aProducto[0] || new Producto('Anónimo');
+     // Productos rebajados
+    this.verOferta();
+ 
   }
 
-    //este producto lo recibe el hijo como input
-    addProducto( productoDelInput : Producto ){
-    console.log('ProductoComponent addProducto');
-    this.productoSelec = productoDelInput;
+  //si el prpducto tiene oferta calcular su precio con un descuento del 20 por ciento
+  verOferta() {
+    console.log('SupermercadoComponent función verOferta');
+    
+    for (var producto of this.aProducto){
+      console.log('SupermercadoComponentver Oferta '+ producto.precioOferta)
+    
+      if(producto.precioOferta == true){
+        producto.oferta = producto.precio-(producto.precio* 20 / 100);
+        //console.log(producto); 
+      }
+    }
+  }
+   
+  //sumar cantidad del producto
+  masCantidad() {
+    this.acumulador++;
+    console.log(this.acumulador);
   }
 
-}
+  // restar cantidad del producto
+  menosCantidad() {
+    this.acumulador--;
+    console.log(this.acumulador);  
+  }
+
+  //añadir producto al carrito
+  anadirProductoCarro(id:number): void {
+    console.log('ProductoComponent añadir producto al carro');
+
+    this.productoService.anadirProducto(id);
+  }
+}//fin class ProductoComponent
+
+
+
 

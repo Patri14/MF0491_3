@@ -2,18 +2,20 @@ export class MOCKS_SUPERMERCADO {
 
     static supermercado = `[{
         "id": 1,
-		"nombre": "Naraja",
+		"nombre": "Naranjas",
 		"precio": 3,
         "precioOferta": true,
-        "foto": "https://www.alcampo.es/media/h48/hcf/8961586790430.jpg",
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201702/03/00202056702398____3__150x150.jpg",
         "descripcion": "Malla 5 kilos"   
 	},
 	{
         "id": 2,
 		"nombre": "Entrecot",
-		"precio": 10,
+		"precio": 15,
         "precioOferta":true,
-        "foto": "https://www.alcampo.es/media/hf7/hce/8930469412894.jpg",
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA02/CONTENIDOS/201512/17/00118414500977____1__150x150.jpg",
         "descripcion": "De Navarra."   
     },
     {
@@ -21,7 +23,8 @@ export class MOCKS_SUPERMERCADO {
 		"nombre": "Aceite de Oliva",
 		"precio": 20,
         "precioOferta":true,
-        "foto": "https://www.alcampo.es/media/h31/ha5/8980432125982.jpg",
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201709/25/00120902700069____1__150x150.jpg",
         "descripcion": "Del Valle del Jerte"   
     },
     {
@@ -29,23 +32,26 @@ export class MOCKS_SUPERMERCADO {
 		"nombre": "Pañales",
 		"precio": 30,
         "precioOferta":false,
-        "foto": "https://www.alcampo.es/media/hee/haf/9082880360478.jpg",
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201802/28/00128022504204____3__150x150.jpg",
         "descripcion": "De 0-2 años"   
     },
     {
         "id": 5,
-		"nombre": "Abrigo perros",
-		"precio": 17,
-        "precioOferta":true,
-        "foto": "https://www.alcampo.es/media/h95/he1/9097193586718.jpg",
-        "descripcion": "De felpa acolchado" 
+		"nombre": "Acuario",
+		"precio": 15,
+        "precioOferta":false,
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201802/12/00149513000460____1__640x640.jpg",
+        "descripcion": "Piña debajo del mar" 
     },
     {
         "id": 6,
 		"nombre": "Aguacate",
 		"precio": 2,
         "precioOferta":false,
-        "foto": "https://www.alcampo.es/media/h1b/hd4/8968571486238.jpg",
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201703/15/00118110600014____1__150x150.jpg",
         "descripcion": "1 pieza"   
     },
     {
@@ -53,7 +59,8 @@ export class MOCKS_SUPERMERCADO {
 		"nombre": "Cuchara",
 		"precio": 4,
         "precioOferta":false,
-        "foto": "https://www.alcampo.es/media/h4c/hc7/8895095767070.jpg",
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201802/13/00107410223551____2__640x640.jpg",
         "descripcion": "De acero inoxidable"  
     },
     {
@@ -61,24 +68,27 @@ export class MOCKS_SUPERMERCADO {
 		"nombre": "Barbacoa",
 		"precio": 25,
         "precioOferta":false,
-        "foto": "https://www.alcampo.es/media/hc9/hc8/9158561136670.jpg",
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201802/28/00119860100858____1__640x640.jpg",
         "descripcion": "De carbón, rectangular"
     },
     {
         "id": 9,
 		"nombre": "Bombilla led e27",
 		"precio": 2,
-        "precioOferta":false,
-        "foto": "https://www.alcampo.es/media/hb5/h6d/9044215529502.jpg",
+        "precioOferta":true,
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201710/02/00111209900684____1__640x640.jpg",
         "descripcion": "Esférica cálida"   
     },
     {
         "id": 10,
-		"nombre": "Acuario Bob Esponja",
-		"precio": 15,
+		"nombre": "Alimento perros",
+		"precio": 1.5,
         "precioOferta":false,
-        "foto": "https://www.alcampo.es/media/h19/h76/9051477999646.jpg",
-        "descripcion": "Piña debajo del mar"   
+        "oferta":0,
+        "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201709/28/00121910100243____2__150x150.jpg",
+        "descripcion": "Calidad" 
 	}
 		
     ]`;

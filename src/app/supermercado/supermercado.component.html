@@ -17,63 +17,67 @@
           <input type="text" class="form-control" placeholder="Buscar" [(ngModel)]="searchText">
          </a>
         </li>
-        <li><a href="#"><i class="fas fa-shopping-basket fa-2x"></i> Cesta</a></li>
-      </ul>
+        <li><app-carrito></app-carrito></li>
+       </ul>
     </div>
   </div>
 </nav>
 
 <!--listado productos-->
+
 <div class="container">    
   <div class="row">
-     <div class="col-md-12">
-      <div class=" col-xs-6 col-md-3"  *ngFor="let producto of aProducto | filter : searchText" (click)="addProducto(producto)">
-        <div class="producto_completo">
-        <div class="producto_titulo">
-              <div class="imagen_producto">
-                <img class="img_receta" src="{{producto.foto}}" alt="{{producto.nombre}}">
-              </div>
-            </div>
-        <div class="producto_titulo">
-          <div class="product_tile-price_holder">
-            <div class="prices product_tile-prices">
+    <div class="col-md-3 col-sm-4" *ngFor="let producto of aProducto  | filter : searchText">
+      <div class="productos_listado">
+        <!--producto imagen-->
+         <div class="producto-img">
               <div>
-                  <div class="prices-price _pum" *ngIf="">{{producto.precioOferta}}</div>
-                  <div class="prices-price _current"><span>{{producto.precio}}</span><span>€</span></div>
-               </div>
+                <!--círculo descuento-->
+                <span class="badge" title="En oferta" *ngIf="producto.precioOferta">
+                  <span class="circulo"><p>20%</p></span>
+                </span>
+              </div> 
+              <a href="" title="{{producto.nombre}}" class="event">
+                <img src="{{producto.foto}}" alt="{{producto.nombre}}" title="{{producto.nombre}}" >
+              </a>
+          </div>
+               
+          <div class="producto_nombre">
+              <div class="producto-precio" *ngIf="producto.precioOferta">
+                <div class="precio_anterior _tachado">{{producto.precio}} €/kg</div>
+                <span class="precio rojo">{{producto.oferta}} 
+                  <span class="moneda">€</span>
+                </span>
+              </div>
+              <div class="producto-precio" *ngIf="!producto.precioOferta">
+                <span class="precio">{{producto.precio}}
+                  <span class="moneda">€</span>
+                </span>
+              </div>
+              <div class="precio_anterior _kilo">(12,48 € / Kilo)</div>
+              <h4 class="producto_nombre">{{producto.nombre}}  
+                <span class="producto_descripcion">
+                  {{producto.descripcion}}
+                </span>
+              </h4>
+             
+            <!--cantidad-->
+            <div class="btn-cantidad" role="group">
+              <button type="button" class="btn btn-default btn1" (click)="menosCantidad()">-</button>
+              <input type="text" class="btn btn-default cantidad" value="1" [(ngModel)]="acumulador" readonly>
+              <button type="button" class="btn btn-default btn2" (click)="masCantidad()">+</button>
             </div>
-        </div>
-
-        <div class="product_tile-description_holder">
-            <h3 class="producto_titulo_descripcion">
-              <a href="" class="link event">{{producto.nombre}}
-               <span>
-                 {{producto.descripcion}}
-               </span>
-              </a></h3>
-        </div>
-        <!--boton-->
-        
-
-        <button class="product_controls-button _buy button _primary _not_perishable js-add-item js-tooltip">
-          <span>añadir al carro</span>
-        </button>
-
-      </div> 
-      </div> <!--producto completo-->
-          <!-- <div class="product_tile-left_container">
-            <div class="imagen_producto">
-              <img class="img_receta" src="{{producto.foto}}" alt="{{producto.nombre}}">
+            <!--btn anadir-->
+            <div>
+              <button type="button" class="button anadir" (click)="anadirProductoCarro(producto.id)">Añadir al carrito</button>
             </div>
-          </div> -->
-        
-      </div> 
-  </div>
-  
-  
-      
-  </div><!--fin row-->
-</div><!--fin container-->
+          </div>
+      </div><!--fin productos listado-->
+    </div><!--fin col-md-3 col-sm-4-->
+  </div>  <!--fin row--> 
+</div> <!--fin container-->
+
+    
 
 
 <footer class="container-fluid text-center">
