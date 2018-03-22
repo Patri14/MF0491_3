@@ -12,7 +12,8 @@ export class SupermercadoComponent implements OnInit {
 
   aProducto : Array<Producto>; //para que recoger todos los productos de MOCK
   productoSelec : Producto;//para el producto que seleccionaremos para el carrito
-  acumulador: number = 0;//para recoger la cantidad de productos seleccionados
+
+  
 
    //inyectamos para poder usar este servicio en el supermercado
   constructor( public productoService: ProductoService) {
@@ -21,6 +22,7 @@ export class SupermercadoComponent implements OnInit {
     
     this.aProducto = new Array<Producto>(); 
     console.log(this.aProducto); 
+    
    }
 
    //llamadas a los servicios
@@ -30,6 +32,7 @@ export class SupermercadoComponent implements OnInit {
     this.aProducto= this.productoService.getAll();
      // Productos rebajados
     this.verOferta();
+    
  
   }
 
@@ -38,7 +41,7 @@ export class SupermercadoComponent implements OnInit {
     console.log('SupermercadoComponent función verOferta');
     
     for (var producto of this.aProducto){
-      console.log('SupermercadoComponentver Oferta '+ producto.precioOferta)
+      //console.log('SupermercadoComponentver Oferta '+ producto.precioOferta)
     
       if(producto.precioOferta == true){
         producto.oferta = producto.precio-(producto.precio* 20 / 100);
@@ -46,17 +49,18 @@ export class SupermercadoComponent implements OnInit {
       }
     }
   }
-   
   //sumar cantidad del producto
-  masCantidad() {
-    this.acumulador++;
-    console.log(this.acumulador);
+  masCantidad(producto:Producto) {
+    producto.cantidad++;
+    console.log("Producto cantidad +" +producto.cantidad);
   }
 
   // restar cantidad del producto
-  menosCantidad() {
-    this.acumulador--;
-    console.log(this.acumulador);  
+  menosCantidad(producto:Producto) {
+    if (this.productoSelec.cantidad > 1) {
+        producto.cantidad--;
+        console.log("Producto cantidad -"+producto.cantidad); 
+    }
   }
 
   //añadir producto al carrito
@@ -64,7 +68,10 @@ export class SupermercadoComponent implements OnInit {
     console.log('ProductoComponent añadir producto al carro');
 
     this.productoService.anadirProducto(id);
+    
   }
+
+  
 }//fin class ProductoComponent
 
 

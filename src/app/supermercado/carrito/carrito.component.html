@@ -3,7 +3,7 @@
   <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
           <i class="fas fa-shopping-basket cesta"></i>
-        <span class="items">{{ productosCarro.length }}</span>
+        <span class="items"></span>
         <span class="total_cesta">{{totalCarrito()}} €</span>
       </a>
 
@@ -13,8 +13,8 @@
                   <span class="item-left">
                       <img src="{{producto.foto}}" alt="" />
                       <span class="item-info">
-                          <span class="precio" *ngIf="producto.precioOferta">{{producto.oferta}} €</span>
-                          <span class="precio" *ngIf="!producto.precioOferta">{{producto.precio}} €</span>
+                          <span class="precio" *ngIf="producto.precioOferta">{{producto.oferta*producto.cantidad}} €</span>
+                          <span class="precio" *ngIf="!producto.precioOferta">{{producto.precio*producto.cantidad}} €</span>
                           <span class="nombre_pro_carrito">{{producto.nombre}}</span>
                           <span class="descrip_pro_carrito">{{producto.descripcion}}</span>   
                       </span>
@@ -22,9 +22,9 @@
                   <span class="item-right">
                       <div class="btn_cantidad_contendor">
                           <div class="btn-cantidad-carrito" role="group">
-                              <button type="button" class="btn btn-default btn1" (click)="menosCantidad()">-</button>
-                              <input type="text" class="btn btn-default cantidad" value="1" readonly>
-                              <button type="button" class="btn btn-default btn2" (click)="masCantidad()">+</button>
+                              <button type="button" class="btn btn-default btn1" (click)="menosCantidad(producto)">-</button>
+                              <input type="text" class="btn btn-default cantidad" value="{{producto.cantidad}}" readonly>
+                              <button type="button" class="btn btn-default btn2" (click)="masCantidad(producto)">+</button>
                           </div>
                       </div>
                       <button class="btn btn-xs" (click)="eliminarProductoCarro(producto.id)"><i class="far fa-trash-alt"></i></button>
@@ -32,7 +32,7 @@
               </span>
         </li>
         <li class="divider"></li>
-        <li><a class="text-center" href="">TOTAL {{totalCarrito()}} €</a></li>
+        <li class="text-center">TOTAL {{totalCarrito()}} €</li>
       </ul>
   </li>
 </ul>

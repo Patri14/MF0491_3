@@ -13,8 +13,11 @@ export class ProductoService {
   //variable de tipo array de Producto donde guardaremos los productos del carrito
   productoSelec: Producto[] = [];
 
+
+
   constructor() {
     console.log('ProductoService constructor');
+    
    }
 
   //Devuelve todos los productos que tenemos en el supermercado
@@ -30,6 +33,7 @@ export class ProductoService {
                         element.precio, 
                         element.precioOferta,
                         element.oferta, 
+                        element.cantidad,
                         element.foto,
                         element.descripcion,
                         element.id
@@ -64,10 +68,17 @@ export class ProductoService {
 //llamamos a esta función desde el componente carrito para eliminar un producto del carrito
  eliminarProducto(id:number): void {
       console.log('ProductoService eliminar producto');
+      
       let producto = this.productoSelec.find(ob => ob.id === id);
+      console.log('Producto find '+ producto);
       let productoIndex = this.productoSelec.indexOf(producto);
+      console.log('Producto index'+ producto);
       this.productoSelec.splice(productoIndex, 1);
+      
+      
     }
+
+
 }//fin class ProductoService
 
 

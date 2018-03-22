@@ -63,9 +63,9 @@
              
             <!--cantidad-->
             <div class="btn-cantidad" role="group">
-              <button type="button" class="btn btn-default btn1" (click)="menosCantidad()">-</button>
-              <input type="text" class="btn btn-default cantidad" value="1" [(ngModel)]="acumulador" readonly>
-              <button type="button" class="btn btn-default btn2" (click)="masCantidad()">+</button>
+              <button type="button" class="btn btn-default btn1" (click)="menosCantidad(producto)">-</button>
+              <input type="text" class="btn btn-default cantidad" value="{{producto.cantidad}}" readonly>
+              <button type="button" class="btn btn-default btn2" (click)="masCantidad(producto)">+</button>
             </div>
             <!--btn anadir-->
             <div>

@@ -6,10 +6,11 @@ export class Producto{
     precio:number;
     precioOferta:boolean;
     oferta:number;
+    cantidad:number;
     foto:string;
     descripcion:string;
   
-   constructor(nombre:string='anónimo', precio?:number ,precioOferta?:boolean, oferta?:number, foto?:string, descripcion?:string, id?:number ){
+   constructor(nombre:string='anónimo', precio?:number ,precioOferta?:boolean, oferta?:number,cantidad?:number, foto?:string, descripcion?:string, id?:number ){
         console.log('Producto constructor');
         
         //inicializamos las variables
@@ -23,6 +24,7 @@ export class Producto{
         this.precio = precio;
         this.precioOferta = precioOferta;
         this.oferta = oferta;
+        this.cantidad = 1;
         this.descripcion = descripcion;
         this.id=id;
         

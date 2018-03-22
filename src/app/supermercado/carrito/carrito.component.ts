@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ProductoService } from '../../providers/producto.service';
 import { Producto } from '../../model/producto';
+
 
 
 @Component({
@@ -12,29 +13,26 @@ import { Producto } from '../../model/producto';
 export class CarritoComponent implements OnInit { 
   
   productosCarro: Producto[] = [];
-  acumulador:number = 0;
+
 
   constructor(private productoService: ProductoService) {
-    console.log('CarritoComopent constructor');
-    console.log(this.productosCarro);
+    console.log('CarritoComopent constructor');    
    }
+
+   ngOnInit(): void {
+    console.log('CarritoComopent onInit');
+       this.anadirProductoCarro();         
+  }
     
   
   anadirProductoCarro(): void {
     console.log('CarritoComopent añadir producto al carrito');
        this.productosCarro = this.productoService.obtenerProductoSelec();
-       this.acumulador++;
-        console.log(this.acumulador);
-      
-        this.totalCarrito();    
+        
+      this.totalCarrito();
   }
 
-  ngOnInit(): void {
-    console.log('CarritoComopent onInit');
-       this.anadirProductoCarro();
-       this.acumulador++;
-       console.log(this.acumulador);
-  }
+  
 
   eliminarProductoCarro(id:number): void {
     console.log('CarritoComopent eliminar producto del carrito');
@@ -54,7 +52,10 @@ export class CarritoComponent implements OnInit {
     }
 
    return total;
-  }   
+  } 
+  
+  
+  
 }//fin class CarritoComponent
 
 

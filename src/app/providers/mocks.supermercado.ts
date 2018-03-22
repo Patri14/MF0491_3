@@ -6,6 +6,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 3,
         "precioOferta": true,
         "oferta":0,
+        "cantidad":0,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201702/03/00202056702398____3__150x150.jpg",
         "descripcion": "Malla 5 kilos"   
 	},
@@ -15,6 +16,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 15,
         "precioOferta":true,
         "oferta":0,
+        "cantidad":0,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA02/CONTENIDOS/201512/17/00118414500977____1__150x150.jpg",
         "descripcion": "De Navarra."   
     },
@@ -24,6 +26,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 20,
         "precioOferta":true,
         "oferta":0,
+        "cantidad":0,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201709/25/00120902700069____1__150x150.jpg",
         "descripcion": "Del Valle del Jerte"   
     },
@@ -33,6 +36,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 30,
         "precioOferta":false,
         "oferta":0,
+        "cantidad":1,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201802/28/00128022504204____3__150x150.jpg",
         "descripcion": "De 0-2 años"   
     },
@@ -42,6 +46,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 15,
         "precioOferta":false,
         "oferta":0,
+        "cantidad":1,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201802/12/00149513000460____1__640x640.jpg",
         "descripcion": "Piña debajo del mar" 
     },
@@ -51,6 +56,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 2,
         "precioOferta":false,
         "oferta":0,
+        "cantidad":1,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201703/15/00118110600014____1__150x150.jpg",
         "descripcion": "1 pieza"   
     },
@@ -60,6 +66,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 4,
         "precioOferta":false,
         "oferta":0,
+        "cantidad":1,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201802/13/00107410223551____2__640x640.jpg",
         "descripcion": "De acero inoxidable"  
     },
@@ -69,6 +76,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 25,
         "precioOferta":false,
         "oferta":0,
+        "cantidad":1,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201802/28/00119860100858____1__640x640.jpg",
         "descripcion": "De carbón, rectangular"
     },
@@ -78,6 +86,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 2,
         "precioOferta":true,
         "oferta":0,
+        "cantidad":1,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201710/02/00111209900684____1__640x640.jpg",
         "descripcion": "Esférica cálida"   
     },
@@ -87,6 +96,7 @@ export class MOCKS_SUPERMERCADO {
 		"precio": 1.5,
         "precioOferta":false,
         "oferta":0,
+        "cantidad":1,
         "foto": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201709/28/00121910100243____2__150x150.jpg",
         "descripcion": "Calidad" 
 	}
